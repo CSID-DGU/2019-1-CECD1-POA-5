@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PLACE OF ALICE</title>
+    <!-- ****************************************************************************************************
+    * Library Import
+    ***************************************************************************************************** -->
+    <!-- ----------[ JQuery Original Import ]---------- -->
+    <script src="lib/jquery/original/jquery-3.3.1.min.js" type="application/javascript"></script>
+    <!-- ----------[ JQuery mCustomScrollbar Import ]---------- -->
+    <script src="lib/jquery/mCustomScrollbar/js/jquery.mCustomScrollbar.concat.min.js" type="application/javascript"></script>
+    <link href="lib/jquery/mCustomScrollbar/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <!-- ----------[ Common Import ]---------- -->
+    <script src="lib/common/js/design.js" type="application/javascript"></script>
+    <link href="lib/common/css/import.css" rel="stylesheet">
+    <!-- ----------[ Font Awesome Import ]---------- -->
+    <link href="lib/font_awesome/css/fontawesome-all.min.css" rel="stylesheet">
+    <!-- ----------[ Modal Import ]---------- -->
+    <script src="lib/modal/js/modal.js" type="application/javascript"></script>
+    <link href="lib/modal/css/modal.css" rel="stylesheet">
+    <!-- ----------[ Date Picker Import ]---------- -->
+    <script src="lib/datepicker/js/datepicker.js" type="application/javascript"></script>
+    <script src="lib/datepicker/js/datepicker.en.js" type="application/javascript"></script>
+    <link href="lib/datepicker/css/datepicker.css" rel="stylesheet">
+    <!-- ----------[ Echarts JS Import ]---------- -->
+    <script src="lib/echarts/js/echarts.js" type="application/javascript"></script>
+    <!-- ----------[ Chart JS Import ]---------- -->
+    <script src="lib/chartJS/js/Chart.js" type="application/javascript"></script>
+    <script src="lib/chartJS/js/Chart.bundle.js" type="application/javascript"></script>
+    <script src="lib/chartJS/js/chartjs-plugin-annotation.js" type="application/javascript"></script>
+    <link href="lib/chartJS/css/Chart.css" rel="stylesheet">
+    <!-- ----------[ Loader Import ]---------- -->
+    <script src="lib/loader/js/loader.js" type="application/javascript"></script>
+    <link href="lib/loader/css/loader.css" rel="stylesheet">
+    <!-- ****************************************************************************************************
+    * Custom JS Import
+    ***************************************************************************************************** -->
+    <script src="js/index/script.js" type="application/javascript"></script>
+    <!-- ****************************************************************************************************
+    * Custom CSS Import
+    ***************************************************************************************************** -->
+    <link href="css/index/style.css" rel="stylesheet">
+</head>
+<body class="font_bonGothic_regular">
+<section id="loaderA" class="font_bonGothic_regular"></section>
+<section id="loaderB" class="font_bonGothic_regular"></section>
+<section data-page="mainPage" class="">
+    <!-- ****************************************************************************************************
+    * Header Layer
+    ***************************************************************************************************** -->
+    <header>
+    <div class="wrap">
+        <div class="logo">
+            <!--<img src="resource/image/logo/mw_small.png">-->
+            <em class="font_bonGothic_bold">Play Time Dashboard</em>
+        </div>
+        <div class="widget">
+            <table class="widget_table">
+                <tr>
+                    <td>
+                        <span class="login_time">
+                            <em class="title">이전 로그인 : </em>
+                            <em class="time">2018-11-29 14:16</em>
+                        </span>
+                    </td>
+                    <td>
+                        <i class="icon fas fa-mail-bulk"></i>
+                        <i class="icon fas fa-volume-up"></i>
+                        <i class="icon fas fa-lock"></i>
+                    </td>
+                    <td>
+                        <span class="user_data">
+                            <em class="user_classes">Admin</em>
+                            <em class="user_name">LacoLico</em>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </header>
+    <!-- ****************************************************************************************************
+    * Main Layer
+    ***************************************************************************************************** -->
+    <main>
+    <div class="wrap">
+        <!-- --------------------------------------------------
+        * Main Layer - Fast Menu Layer
+        --------------------------------------------------- -->
+        <nav id="fastMenu" class="fast_menu" data-design="fastMenuA">
+            <div class="wrap">
+                <!-- [ Menu 열고 닫는 Toggle 버튼 ] -->
+                <div class="toggle">
+                    <button id="fastMenuToggleBtn" class="toggle_button t_button">
+                        <img class="toggle_image" src="resource/image/icon/menu_on.png">
+                    </button>
+                </div>
+                <!-- [ Menu 바로가기 버튼 ] -->
+                <ul id="fastMenuOpenBtn" class="menu_list">
+                    <li> <!-- AGC 관제 바로가기 -->
+                        <button class="t_button highlight" title="PlayTime 변화 모니터링" data-content="viewAGCMenu">
+                            <span>
+                                <img src="resource/image/icon/monitor.png">
+                                <i class="fas fa-desktop"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">모니터링</em>
+                        </button>
+                    </li>
+                    <li> <!-- 통계 및 분석 바로가기 -->
+                        <button class="t_button" title="영향력 값 조회" data-content="analyseMenu">
+                            <span>
+                                <img src="resource/image/icon/dblab.png">
+                                <i class="fas fa-chart-bar"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">영향력 값 조회</em>
+                        </button>
+                    </li>
+                    <li> <!-- 사용자 관리 바로가기 -->
+                        <button class="t_button" title="사용자 관리" data-content="userManagerMenu">
+                            <span>
+                                <img src="resource/image/icon/user_manage.png">
+                                <i class="fas fa-user-tie"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">사용자 관리</em>
+                        </button>
+                    </li>
+                    <!-- 조직 관리 바로가기
+                    <li>
+                        <button class="t_button" title="조직 관리" data-content="deptManagerMenu">
+                            <span>
+                                <img src="resource/image/icon/dept_manage.png">
+                                <i class="fas fa-sitemap"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">조직 관리</em>
+                        </button>
+                    </li>
+                    -->
+                    <!-- 통신소 관리 바로가기
+                    <li>
+                        <button class="t_button" title="통신소 관리" data-content="commManagerMenu">
+                            <span>
+                                <img src="resource/image/icon/comm_manage.png">
+                                <i class="fas fa-broadcast-tower"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">통신소 관리</em>
+                        </button>
+                    </li>
+                    -->
+                    <!-- 링크 관리 바로가기
+                    <li>
+                        <button class="t_button" title="링크 관리" data-content="linkManagerMenu">
+                            <span>
+                                <img src="resource/image/icon/link_manage.png">
+                                <i class="fas fa-link"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">링크 관리</em>
+                        </button>
+                    </li>
+                    -->
+                    <!-- 내 정보 관리 바로가기
+                    <li>
+                        <button class="t_button" title="내 정보 관리" data-content="myManagerMenu">
+                            <span>
+                                <img src="resource/image/icon/my_manage.png">
+                                <i class="fas fa-user-edit"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">내 정보 변경</em>
+                        </button>
+                    </li>
+                    -->
+                    <!-- 사용자 지원 바로가기
+                    <li>
+                        <button class="t_button" title="사용자 지원" data-content="userSupplyMenu">
+                            <span>
+                                <img src="resource/image/icon/user_supply.png">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <em class="font_bonGothic_regular">사용자 지원</em>
+                        </button>
+                    </li>
+                    -->
+                </ul>
+            </div>
+        </nav>
+        <!-- --------------------------------------------------
+        * Main Layer - Content Layer
+        --------------------------------------------------- -->
+        <div class="contents">
+        <div class="wrap">
+            <div class="notice_contents_box">
+            <div class="wrap">
+                <!-- ----------[ 공지사항 Simple Board ]---------- -->
+                <div class="simple_slider fade" data-design="simpleSlider">
+                    <ul class="slide_board">
+                        <li><em>[ 2018-11-12 ~ 2018-11-13 ] - 1차 클로즈베타 기간</em></li>
+                        <li><em>[ 2018-11-14 ] - 1차 업데이트</em></li>
+                        <li><em>[ 2018-11-15 ~ 2018-11-16 ] - 2차 클로즈베타 기간</em></li>
+                        <li><em>[ 2018-11-17 ] - 2차 업데이트</em></li>
+                    </ul>
+                    <span class="control">
+                        <button class="slide_pre"><i class="icon fas fa-chevron-left"></i></button>
+                        <button class="slide_next"><i class="icon fas fa-chevron-right"></i></button>
+                    </span>
+                </div>
+            </div>
+            </div>
+            <div class="agc_contents_box">
+            <div class="wrap">
+                <!-- ----------[ 학습 상태 개수 표시 ]---------- -->
+                <article id="conditionCount" class="condition_count" data-design="conditionCount">
+                    <!-- 학습 완료 상태 개수 -->
+                    <span class="condWrap" data-content="complete">
+                        <div class="cond complete">
+                            <span class="icon">
+                                <img src="resource/image/icon/window_complete.png">
+                            </span>
+                            <span class="desc">
+                                <div class="name">
+                                    <em class="ko">학습완료</em>
+                                    <em class="en">Complete</em>
+                                </div>
+                                <div class="data">
+                                    <em class="value font_bonGothic_bold">27</em>
+                                </div>
+                            </span>
+                        </div>
+                    </span>
+                    <!-- 주의 상태 개수 -->
+                    <span class="condWrap" data-content="proceeding">
+                        <div class="cond proceeding">
+                            <span class="icon">
+                                <img src="resource/image/icon/window_almost.png">
+                            </span>
+                            <span class="desc">
+                                <div class="name">
+                                    <em class="ko">학습진행</em>
+                                    <em class="en">Proceeding</em>
+                                </div>
+                                <div class="data">
+                                    <em class="value font_bonGothic_bold">52</em>
+                                </div>
+                            </span>
+                        </div>
+                    </span>
+                    <!-- 경고 상태 개수 -->
+                    <span class="condWrap" data-content="warning">
+                        <div class="cond warning">
+                            <span class="icon">
+                                <img src="resource/image/icon/window_warning.png">
+                            </span>
+                            <span class="desc">
+                                <div class="name">
+                                    <em class="ko">학습경고</em>
+                                    <em class="en">Warning</em>
+                                </div>
+                                <div class="data">
+                                    <em class="value highlight font_bonGothic_bold">2</em>
+                                </div>
+                            </span>
+                        </div>
+                    </span>
+                    <!-- 미연결 상태 개수 -->
+                    <span class="condWrap" data-content="waiting">
+                        <div class="cond waiting">
+                            <span class="icon">
+                                <img src="resource/image/icon/window_wait.png">
+                            </span>
+                            <span class="desc">
+                                <div class="name">
+                                    <em class="ko">학습대기</em>
+                                    <em class="en">Waiting</em>
+                                </div>
+                                <div class="data">
+                                    <em class="value highlight font_bonGothic_bold">12</em>
+                                </div>
+                            </span>
+                        </div>
+                    </span>
+                </article>
+                <!-- ----------[ Menu 화면 ]---------- -->
+                <article id="menuView" class="menu_view" data-design="menuView">
+                    <!-- AGC 관제 메뉴 화면 -->
+                    <div id="viewAGCMenu" class="view visible">
+                        <!-- AGC 전체 관제 화면 -->
+                        <div id="allView" class="all_view visible" data-design="dataView">
+                            <div class="wrap">
+                                <!-- AGC 관제 화면 타이틀 -->
+                                <div class="title_box" data-design="designTitleBox">
+                                    <em class="title font_bonGothic_bold">학습진행중인 컨텐츠</em>
+                                </div>
+                                <!-- 전체 AGC -->
+                                <div class="table_box d_box scrollBar">
+                                    <span class="table_wrap">
+                                        // --------------------------------------------------
+                                        <div class="learn_graph">
+                                            <div class="graph_title">
+                                                <em class="title font_bonGothic_bold">Content 1</em>
+                                            </div>
+                                            <canvas class="graph" id="playTimeGraph_1" ></canvas>
+                                        </div>
+                                        // --------------------------------------------------
+                                        <div class="learn_graph">
+                                            <div class="graph_title">
+                                                <em class="title font_bonGothic_bold">Content 3</em>
+                                            </div>
+                                            <canvas class="graph" id="playTimeGraph_3" ></canvas>
+                                        </div>
+                                        // --------------------------------------------------
+                                    </span>
+                                    <span class="table_wrap right">
+                                        // --------------------------------------------------
+                                        <div class="learn_graph">
+                                            <div class="graph_title">
+                                                <em class="title font_bonGothic_bold">Content 2</em>
+                                            </div>
+                                            <canvas class="graph" id="playTimeGraph_2" ></canvas>
+                                        </div>
+                                        // --------------------------------------------------
+                                        <div class="learn_graph">
+                                            <div class="graph_title">
+                                                <em class="title font_bonGothic_bold">Content 4</em>
+                                            </div>
+                                            <canvas class="graph" id="playTimeGraph_4" ></canvas>
+                                        </div>
+                                        // --------------------------------------------------
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- AGC 상세 관제 화면 -->
+                        <div id="detailView" class="detail_view" data-design="dataView">
+                            <div class="wrap">
+                                <!-- AGC 상세 관제 화면 모듈 -->
+                                <div class="module_box scrollBar">
+                                    <div class="modules">
+                                        <span data-design="designTimeCondition">
+                                            <div class="title_box"><em class="title">망경대</em></div>
+                                            <div class="sub_module">
+                                                <span class="title_box normal">
+                                                    <i class="icon fas fa-server"></i>
+                                                    <em class="title">망경대</em>
+                                                    <i class="arrow fas fa-arrow-right"></i>
+                                                    <em class="title">B1</em>
+                                                    <em class="agc">3.242</em>
+                                                </span>
+                                                <span class="time_box">
+                                                    <div id="testTime1" class="time_canvas"></div>
+                                                </span>
+                                            </div>
+                                            <div class="sub_module">
+                                                <span class="title_box warning">
+                                                    <i class="icon fas fa-server"></i>
+                                                    <em class="title">망경대</em>
+                                                    <i class="arrow fas fa-arrow-right"></i>
+                                                    <em class="title">B2</em>
+                                                    <em class="agc">3.553</em>
+                                                </span>
+                                                <span class="time_box">
+                                                    <div id="testTime2" class="time_canvas"></div>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- AGC 상세 관제 화면 테이블 -->
+                                <div class="table_boxes">
+                                    <!-- 비정상 링크, 정상 링크 전환 탭 -->
+                                    <ul class="tab_list" data-design="designTabBoxA">
+                                        <li class="highlight" data-content="detailAbnormalLink"><em>비정상 링크</em></li>
+                                        <li data-content="detailNormalLink"><em>정상 링크</em></li>
+                                    </ul>
+                                    <!-- 비정상 링크 -->
+                                    <div id="detailAbnormalLink" class="tab_box visible">
+                                        <div class="title_box" data-design="designTitleBox">
+                                            <em class="title font_bonGothic_bold">비정상 링크</em>
+                                        </div>
+                                        <div class="table_box t_box">
+                                            <span class="table_wrap">
+                                                <table data-design="designTableA">
+                                                    <tr class="simple">
+                                                        <th class="link_name">링크명</th>
+                                                        <th class="comm_name">자국명</th>
+                                                        <th class="comm_name">대국명</th>
+                                                        <th class="agc_value">AGC</th>
+                                                        <th class="condition">상태</th>
+                                                        <th class="alarm_control">경보</th>
+                                                    </tr>
+                                                </table>
+                                            </span>
+                                        </div>
+                                        <!-- 전체 AGC -->
+                                        <div class="table_box d_box scrollBar">
+                                            <span class="table_wrap">
+                                                <table data-design="designTableA">
+                                                    <tr>
+                                                        <td class="link_name" rowspan="2">망경대 - B1</td>
+                                                        <td class="comm_name">망경대</td>
+                                                        <td class="comm_name">B1</td>
+                                                        <td class="agc_value">
+                                                            <em data-content="sg">3.355</em>
+                                                        </td>
+                                                        <td class="condition"><img src="resource/image/icon/lamp_black.png"></td>
+                                                        <td class="alarm_control" rowspan="2">
+                                                            <label data-design="designCheckboxA">
+                                                                <input type="checkbox" checked>
+                                                                <span class="bell">
+                                                                    <i class="on fas fa-bell"></i>
+                                                                    <i class="off fas fa-bell-slash"></i>
+                                                                </span>
+                                                            </label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="comm_name">B1</td>
+                                                        <td class="comm_name">망경대</td>
+                                                        <td class="agc_value">
+                                                            <em data-content="sg">3.224</em>
+                                                        </td>
+                                                        <td class="condition"><img src="resource/image/icon/lamp_red.png"></td>
+                                                    </tr>
+                                                </table>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- 정상 링크 -->
+                                    <div id="detailNormalLink" class="tab_box">
+                                        <div class="title_box" data-design="designTitleBox">
+                                            <em class="title font_bonGothic_bold">정상 링크</em>
+                                        </div>
+                                        <div class="table_box t_box">
+                                            <span class="table_wrap">
+                                                <table data-design="designTableA">
+                                                    <tr class="simple">
+                                                        <th class="link_name">링크명</th>
+                                                        <th class="comm_name">자국명</th>
+                                                        <th class="comm_name">대국명</th>
+                                                        <th class="agc_value">AGC</th>
+                                                        <th class="condition">상태</th>
+                                                        <!--<th class="alarm_control">경보</th>-->
+                                                    </tr>
+                                                </table>
+                                            </span>
+                                        </div>
+                                        <!-- 전체 AGC -->
+                                        <div class="table_box d_box scrollBar">
+                                            <span class="table_wrap">
+                                                <table data-design="designTableA">
+                                                    <tr>
+                                                        <td class="link_name" rowspan="2">U3 - 계룡산</td>
+                                                        <td class="comm_name">U3</td>
+                                                        <td class="comm_name">계룡산</td>
+                                                        <td class="agc_value">
+                                                            <em data-content="sg">3.355</em>
+                                                        </td>
+                                                        <td class="condition"><img src="resource/image/icon/lamp_green.png"></td>
+                                                        <!--<td class="alarm_control" rowspan="2">
+                                                            <label data-design="designCheckboxA">
+                                                                <input type="checkbox" checked>
+                                                                <span class="bell">
+                                                                    <i class="on fas fa-bell"></i>
+                                                                    <i class="off fas fa-bell-slash"></i>
+                                                                </span>
+                                                            </label>
+                                                        </td>-->
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="comm_name">계룡산</td>
+                                                        <td class="comm_name">U3</td>
+                                                        <td class="agc_value">
+                                                            <em data-content="sg">3.224</em>
+                                                        </td>
+                                                        <td class="condition"><img src="resource/image/icon/lamp_green.png"></td>
+                                                    </tr>
+                                                </table>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 통계 및 분석 메뉴 화면 -->
+                    <div id="analyseMenu" class="view">
+                        <div data-design="simpleManager">
+                            <div class="title_box marine analysis_mode">
+                                <ul data-design="designTabBoxB">
+                                    <li class="highlight" data-content="analysisAGC"><em>영향력 값 변화 그래프 조회</em></li>
+                                    <li data-content="analysisAdminLog"><em>영향력 값 조회</em></li>
+                                </ul>
+                            </div>
+                            <div id="analysisAGC" class="data_box scrollBar">
+                                <div data-design="designFormA">
+                                    <em class="main_title">그래프 조회</em>
+                                    <label class="form_box">
+                                        <em class="title">Content Code</em>
+                                        <label class="label_box">
+                                            <input type="text" placeholder="Content Code">
+                                            <i class="icon fas fa-pen-fancy"></i>
+                                        </label>
+                                    </label>
+                                    <label class="form_box">
+                                        <em class="title">Object Code</em>
+                                        <label class="label_box">
+                                            <input type="text" placeholder="Object Code">
+                                            <i class="icon fas fa-pen-fancy"></i>
+                                        </label>
+                                    </label>
+                                    <label class="form_box">
+                                        <em class="title">기간</em>
+                                        <label class="label_box">
+                                            <input type="text" class="datepicker-here" data-language="en" placeholder="시작 날짜" readonly>
+                                            <i class="icon fas fa-calendar-alt"></i>
+                                        </label>
+                                        <em class="title">~</em>
+                                        <label class="label_box">
+                                            <input type="text" class="datepicker-here" data-language="en" placeholder="종료 날짜" readonly>
+                                            <i class="icon fas fa-calendar-alt"></i>
+                                        </label>
+                                    </label>
+                                    <label class="form_box">
+                                        <button class="button">조회</button>
+                                    </label>
+                                </div>
+                                <div class="influence_graph_box">
+                                    // --------------------------------------------------
+                                    <div data-design="influenceGraph">
+                                        <div class="title_box"><em class="title font_bonGothic_bold">Content Name - Object Name - Property Name</em></div>
+                                        <canvas class="graph" id="influenceGraph_1"></canvas>
+                                    </div>
+                                    // --------------------------------------------------
+                                    <div data-design="influenceGraph">
+                                        <div class="title_box"><em class="title font_bonGothic_bold">Content Name - Object Name - Property Name</em></div>
+                                        <canvas class="graph" id="influenceGraph_2"></canvas>
+                                    </div>
+                                    // --------------------------------------------------
+                                </div>
+                            </div>
+                            <div id="analysisAdminLog" class="data_box hidden scrollBar">
+                                <div data-design="designFormA">
+                                    <em class="main_title">영향력 값 조회</em>
+                                    <label class="form_box">
+                                        <em class="title">Content Code</em>
+                                        <label class="label_box">
+                                            <input type="text" placeholder="Content Code">
+                                            <i class="icon fas fa-pen-fancy"></i>
+                                        </label>
+                                    </label>
+                                    <label class="form_box">
+                                        <em class="title">Object Code</em>
+                                        <label class="label_box">
+                                            <input type="text" placeholder="Object Code">
+                                            <i class="icon fas fa-pen-fancy"></i>
+                                        </label>
+                                    </label>
+                                    <label class="form_box select_box">
+                                        <em class="title">Property</em>
+                                        <label class="label_box">
+                                            <select class="select_box">
+                                                <option>크기</option>
+                                                <option>길이</option>
+                                                <option>속도</option>
+                                            </select>
+                                        </label>
+                                    </label>
+                                    <label class="form_box">
+                                        <button class="button">조회</button>
+                                    </label>
+                                </div>
+                                <div data-design="simpleManager">
+                                    <div class="table_title_box">
+                                        <table class="marine influence_table" data-design="designTableB">
+                                            <tr>
+                                                <th class="data font_bonGothic_bold">Content Name</th>
+                                                <th class="data font_bonGothic_bold">Object Name</th>
+                                                <th class="data font_bonGothic_bold">Property Name</th>
+                                                <th class="data font_bonGothic_bold">Influence Value (minute)</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="data_box scrollBar">
+                                        <table class="marine" data-design="designTableB">
+                                            <tr>
+                                                <td class="data">Content 1</td>
+                                                <td class="data">Object 1</td>
+                                                <td class="data">크기</td>
+                                                <td class="data">5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="data">Content 1</td>
+                                                <td class="data">Object 1</td>
+                                                <td class="data">길이</td>
+                                                <td class="data">10</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="data">Content 1</td>
+                                                <td class="data">Object 1</td>
+                                                <td class="data">속도</td>
+                                                <td class="data">7</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 사용자 관리 메뉴 화면 -->
+                    <div id="userManagerMenu" class="view">
+                        <div data-design="simpleManager">
+                            <div class="title_box marine">
+                                <em class="title font_bonGothic_bold">사용자 관리</em>
+                                <button id="userManagerAddBtn" class="add_btn" title="추가"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="data_box scrollBar">
+                                <span class="admin" data-design="designUserInfo">
+                                    <div class="info_wrap">
+                                        <table class="info_data">
+                                        <tr>
+                                            <td class="id">LacoLico</td>
+                                            <td class="who">
+                                                <em class="classes">Admin</em>
+                                                <em class="name">최정근</em>
+                                                <span class="buttons">
+                                                    <button class="revise_btn" title="수정"><i class="fas fa-pen"></i></button>
+                                                    <button class="remove_btn" title="삭제"><i class="fas fa-trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="phone military">02-0000-0000</td>
+                                            <td class="phone home" colspan="2">010-0000-0000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="dept" colspan="3">Description</td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                </span>
+                                <span class="user" data-design="designUserInfo">
+                                    <div class="info_wrap">
+                                        <table class="info_data">
+                                        <tr>
+                                            <td class="id">Tester</td>
+                                            <td class="who">
+                                                <em class="classes">User</em>
+                                                <em class="name">Name</em>
+                                                <span class="buttons">
+                                                    <button class="revise_btn" title="수정"><i class="fas fa-pen"></i></button>
+                                                    <button class="remove_btn" title="삭제"><i class="fas fa-trash"></i></button>
+                                                </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="phone military">02-0000-0000</td>
+                                            <td class="phone home" colspan="2">010-0000-0000</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="dept" colspan="3">Description</td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 조직 관리 메뉴 화면 -->
+                    <div id="deptManagerMenu" class="view">
+                        <div data-design="simpleManager">
+                            <div class="title_box marine">
+                                <em class="title font_bonGothic_bold">조직 관리</em>
+                                <button id="deptManagerAddBtn" class="add_btn" title="추가"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="table_title_box">
+                                <table class="marine" data-design="designTableB">
+                                    <tr>
+                                        <th class="data font_bonGothic_bold">조직명</th>
+                                        <th class="controls font_bonGothic_bold">
+                                            <div class="search_box" data-design="designSearchBoxA">
+                                                <i class="search_icon fas fa-search"></i>
+                                                <input type="text" class="search_input" placeholder="Search">
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="data_box scrollBar">
+                                <table id="deptManagerDataTable" class="marine" data-design="designTableB">
+                                    <tr>
+                                        <td class="data">국군지휘통신사령부</td>
+                                        <td class="controls">
+                                            <button class="revise_btn" title="수정"><i class="fas fa-pen"></i></button>
+                                            <button class="remove_btn" title="삭제"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 통신소 관리 메뉴 화면 -->
+                    <div id="commManagerMenu" class="view">
+                        <div data-design="simpleManager">
+                            <div class="title_box marine">
+                                <em class="title font_bonGothic_bold">통신소 관리</em>
+                                <button id="commManagerAddBtn" class="add_btn" title="추가"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="table_title_box">
+                                <table class="marine" data-design="designTableB">
+                                    <tr>
+                                        <th class="data font_bonGothic_bold">통신소명</th>
+                                        <th class="controls font_bonGothic_bold">
+                                            <div class="search_box" data-design="designSearchBoxA">
+                                                <i class="search_icon fas fa-search"></i>
+                                                <input type="text" class="search_input" placeholder="Search">
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="data_box scrollBar">
+                                <table id="commManagerDataTable" class="marine" data-design="designTableB">
+                                    <tr>
+                                        <td class="data">제주기지</td>
+                                        <td class="controls">
+                                            <button class="info_btn" title="정보"><i class="fas fa-info"></i></button>
+                                            <button class="revise_btn" title="수정"><i class="fas fa-pen"></i></button>
+                                            <button class="remove_btn" title="삭제"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 링크 관리 메뉴 화면 -->
+                    <div id="linkManagerMenu" class="view">
+                        <div data-design="simpleManager">
+                            <div class="title_box marine">
+                                <em class="title font_bonGothic_bold">링크 관리</em>
+                                <button id="linkManagerAddBtn" class="add_btn" title="추가"><i class="fas fa-plus"></i></button>
+                            </div>
+                            <div class="table_title_box">
+                                <table class="marine" data-design="designTableB">
+                                    <tr>
+                                        <th class="data font_bonGothic_bold">링크명</th>
+                                        <th class="controls font_bonGothic_bold">
+                                            <div class="search_box" data-design="designSearchBoxA">
+                                                <i class="search_icon fas fa-search"></i>
+                                                <input type="text" class="search_input" placeholder="Search">
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="data_box scrollBar">
+                                <table class="marine" data-design="designTableB">
+                                    <tr>
+                                        <td class="data">망경대 - B1</td>
+                                        <td class="controls">
+                                            <button class="remove_btn" title="삭제"><i class="fas fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 내 정보 변경 메뉴 화면 -->
+                    <div id="myManagerMenu" class="view">
+                        <div data-design="simpleManager">
+                            <div class="title_box marine">
+                                <em class="title font_bonGothic_bold">내 정보 변경</em>
+                                <button class="complete_btn" title="수정 완료">수정 완료</button>
+                            </div>
+                            <div class="data_box scrollBar">
+                                <div class="info_box">
+                                    <table data-design="designFormTableA">
+                                        <tr>
+                                            <td>
+                                                <label class="info id read_only">
+                                                    <span class="icon"><i class="fas fa-user"></i></span>
+                                                    <input type="text" placeholder="나의 아이디" readonly>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="info date">
+                                                    <span class="icon"><i class="fas fa-calendar"></i></span>
+                                                    <input type="text" class="datepicker-here" data-language="en" placeholder="나의 생년월일" readonly>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="info pw">
+                                                    <span class="icon"><i class="fas fa-lock"></i></span>
+                                                    <input type="password" placeholder="나의 비밀번호">
+                                                    <span class="icon check true">
+                                                        <i class="fas fa-check-circle" data-content="true"></i>
+                                                        <i class="fas fa-times-circle" data-content="false"></i>
+                                                    </span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="info classes_name">
+                                                    <span class="icon"><i class="fas fa-user-tag"></i></span>
+                                                    <input type="text" class="classes" placeholder="계급" readonly>
+                                                    <input type="text" class="name" placeholder="나의 이름">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="info pw_re">
+                                                    <span class="icon"><i class="fas fa-lock"></i></span>
+                                                    <input type="password" placeholder="나의 비밀번호 재확인">
+                                                    <span class="icon check false">
+                                                        <i class="fas fa-check-circle" data-content="true"></i>
+                                                        <i class="fas fa-times-circle" data-content="false"></i>
+                                                    </span>
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="info group_num">
+                                                    <span class="icon"><i class="fas fa-tag"></i></span>
+                                                    <input type="text" placeholder="나의 군번">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label class="info phone military">
+                                                    <span class="icon"><i class="fas fa-phone"></i></span>
+                                                    <input type="text"placeholder="나의 군 전화번호">
+                                                </label>
+                                            </td>
+                                            <td>
+                                                <label class="info phone mobile">
+                                                    <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                                                    <input type="text" placeholder="나의 휴대폰 번호">
+                                                </label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <label class="info dept">
+                                                    <span class="icon"><i class="fas fa-home"></i></span>
+                                                    <input type="text" placeholder="나의 소속" readonly>
+                                                </label>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 시용자 지원 메뉴 화면 -->
+                    <div id="userSupplyMenu" class="view">
+                        <div data-design="simpleManager">
+                            <div class="title_box marine">
+                                <em class="title font_bonGothic_bold">사용자 지원 - 가이드 및 프로그램 다운로드</em>
+                            </div>
+                            <div class="helper_box">
+                                <span data-design="designHelperBox">
+                                    <div class="icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="title">
+                                        <em>웹 가이드</em>
+                                    </div>
+                                </span>
+                                <span data-design="designHelperBox">
+                                    <div class="icon">
+                                        <i class="fas fa-book"></i>
+                                    </div>
+                                    <div class="title">
+                                        <em>통신소용 프로그램 가이드</em>
+                                    </div>
+                                </span>
+                                <span data-design="designHelperBox">
+                                    <div class="icon">
+                                        <i class="fas fa-download"></i>
+                                    </div>
+                                    <div class="title">
+                                        <em>통신소용 프로그램 다운로드</em>
+                                    </div>
+                                </span>
+                            </div>
+                            <div class="title_box marine">
+                                <em class="title font_bonGothic_bold">사용자 지원 - FAQ</em>
+                            </div>
+                            <div class="table_title_box">
+                                <table class="marine" data-design="designTableB">
+                                    <tr>
+                                        <th class="data font_bonGothic_bold">제목</th>
+                                        <th class="controls font_bonGothic_bold">
+                                            <div class="search_box" data-design="designSearchBoxA">
+                                                <i class="search_icon fas fa-search"></i>
+                                                <input type="text" class="search_input" placeholder="Search">
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="data_box scrollBar">
+                                <table class="marine detail_mode" data-design="designTableB">
+                                    <tr>
+                                        <td class="data">
+                                            <em>AGC 만들기 귀찮을때 대처법</em>
+                                            <div class="data_detail" data-content="hidden">
+                                                <em>수빈이를 가지고 놀면 된다.</em>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="data">
+                                            <em>수빈이 가지고 놀기 귀찮을때 대처법</em>
+                                            <div class="data_detail" data-content="hidden">
+                                                <em>퇴출 시키면 된다</em>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            </div>
+        </div>
+        </div>
+        <nav class="user_list">
+        <div class="wrap">
+            User List
+        </div>
+        </nav>
+    </div>
+    </main>
+    <!-- ****************************************************************************************************
+    * Footer Layer
+    ***************************************************************************************************** -->
+    <footer>
+    <div class="wrap">
+
+    </div>
+    </footer>
+</section>
+<!-- ****************************************************************************************************
+* Modal Layers
+***************************************************************************************************** -->
+<div id="conditionModal" class="modal" data-design="conditionModal" data-content="normal">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">컨텐츠</em>
+    </div>
+    <table data-design="designTableC">
+        <tr>
+            <th class="comm_name">
+                <i class="fas fas fa-tag"></i>
+                <em>Content Name</em>
+            </th>
+            <th class="comm_name">
+                <i class="fas fas fa-tag"></i>
+                <em>Error Value</em>
+            </th>
+            <th class="agc_value">
+                <i class="fas fas fa-book-open"></i>
+                <em>Count</em>
+            </th>
+        </tr>
+    </table>
+    <div class="contents_box scrollBar">
+        <table data-design="designTableC">
+            <tr>
+                <td class="comm_name">Content 1</td>
+                <td class="comm_name"><em>3</em></td>
+                <td class="agc_value">
+                    52
+                </td>
+            </tr>
+            <tr>
+                <td class="comm_name">Content 2</td>
+                <td class="comm_name"><em>5</em></td>
+                <td class="agc_value">
+                    23
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="linkDataModal" class="modal" data-design="conditionModal">
+    <div class="title_box">
+        <em class="title">링크 그래프</em>
+    </div>
+    <div class="contents_box">
+
+    </div>
+</div>
+<!-- 사용자 관리 - ( 사용자 추가 Modal ) -->
+<div id="userManagerAddModal" class="modal" data-design="designModalA">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">사용자 추가</em>
+    </div>
+    <div class="contents_box">
+        <table data-design="designFormTableA">
+            <tr>
+                <td>
+                    <label class="info id">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <input type="text" placeholder="나의 아이디">
+                    </label>
+                </td>
+                <td>
+                    <label class="info date">
+                        <span class="icon"><i class="fas fa-calendar"></i></span>
+                        <input type="text" class="datepicker-here" data-language="en" placeholder="나의 생년월일" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info pw">
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" placeholder="나의 비밀번호">
+                        <span class="icon check true">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class="info classes_name">
+                        <span class="icon"><i class="fas fa-user-tag"></i></span>
+                        <input type="text" class="classes" placeholder="계급" readonly>
+                        <input type="text" class="name" placeholder="나의 이름">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info pw_re">
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" placeholder="나의 비밀번호 재확인">
+                        <span class="icon check false">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class="info group_num">
+                        <span class="icon"><i class="fas fa-tag"></i></span>
+                        <input type="text" placeholder="나의 군번">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info phone military">
+                        <span class="icon"><i class="fas fa-phone"></i></span>
+                        <input type="text"placeholder="나의 군 전화번호">
+                    </label>
+                </td>
+                <td>
+                    <label class="info phone mobile">
+                        <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                        <input type="text" placeholder="나의 휴대폰 번호">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label class="info dept">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <input type="text" placeholder="나의 소속" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label class="info permission">
+                        <span class="icon"><i class="fas fa-key"></i></span>
+                        <input type="text" placeholder="권한" readonly>
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn_box">
+        <button id="userManagerAddCompleteBtn">추가 완료</button>
+    </div>
+</div>
+<!-- 사용자 관리 - ( 사용자 정보 수정 Modal ) -->
+<div id="userManagerReviseModal" class="modal" data-design="designModalA">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">사용자 정보 수정</em>
+    </div>
+    <div class="contents_box">
+        <table data-design="designFormTableA">
+            <tr>
+                <td>
+                    <label class="info id read_only">
+                        <span class="icon"><i class="fas fa-user"></i></span>
+                        <input type="text" placeholder="나의 아이디" readonly>
+                    </label>
+                </td>
+                <td>
+                    <label class="info date">
+                        <span class="icon"><i class="fas fa-calendar"></i></span>
+                        <input type="text" class="datepicker-here" data-language="en" placeholder="나의 생년월일" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info pw">
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" placeholder="나의 비밀번호">
+                        <span class="icon check true">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class="info classes_name">
+                        <span class="icon"><i class="fas fa-user-tag"></i></span>
+                        <input type="text" class="classes" placeholder="계급" readonly>
+                        <input type="text" class="name" placeholder="나의 이름">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info pw_re">
+                        <span class="icon"><i class="fas fa-lock"></i></span>
+                        <input type="password" placeholder="나의 비밀번호 재확인">
+                        <span class="icon check false">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+                <td>
+                    <label class="info group_num">
+                        <span class="icon"><i class="fas fa-tag"></i></span>
+                        <input type="text" placeholder="나의 군번">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info phone military">
+                        <span class="icon"><i class="fas fa-phone"></i></span>
+                        <input type="text"placeholder="나의 군 전화번호">
+                    </label>
+                </td>
+                <td>
+                    <label class="info phone mobile">
+                        <span class="icon"><i class="fas fa-mobile-alt"></i></span>
+                        <input type="text" placeholder="나의 휴대폰 번호">
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label class="info dept">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <input type="text" placeholder="나의 소속" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label class="info permission">
+                        <span class="icon"><i class="fas fa-key"></i></span>
+                        <input type="text" placeholder="권한" readonly>
+                    </label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn_box">
+        <button id="userManagerReviseCompleteBtn">수정 완료</button>
+    </div>
+</div>
+<!-- 조직 관리 - ( 조직 추가 Modal ) -->
+<div id="deptManagerAddModal" class="modal" data-design="designModalA">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">조직 추가</em>
+    </div>
+    <div class="contents_box">
+        <table data-design="designFormTableA">
+            <tr>
+                <td>
+                    <label class="info dept_name">
+                        <span class="icon"><i class="fas fa-pen"></i></span>
+                        <input type="text" placeholder="조직명">
+                        <span class="icon check false">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info dept_category_name">
+                        <span class="icon"><i class="fas fa-sitemap"></i></span>
+                        <input type="text" placeholder="선택한 조직 카테고리" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div data-design="designListA">
+                        <label class="search_box">
+                            <span class="search_icon"><i class="fas fa-search"></i></span>
+                            <input type="text" class="search_input" placeholder="조직 카테고리 검색">
+                        </label>
+                        <div class="list_box scrollBar">
+                            <label class="list">
+                                <em class="name">국군지휘통신사령부</em>
+                                <input type="radio" class="radio" name="deptAddSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                            <label class="list">
+                                <em class="name">국군지휘통신사령부 5정보통신단</em>
+                                <input type="radio" class="radio" name="deptAddSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn_box">
+        <button id="deptManagerAddCompleteBtn">추가 완료</button>
+    </div>
+</div>
+<!-- 조직 관리 - ( 조직 정보 수정 Modal ) -->
+<div id="deptManagerReviseModal" class="modal" data-design="designModalA">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">조직 정보 수정</em>
+    </div>
+    <div class="contents_box">
+        <table data-design="designFormTableA">
+            <tr>
+                <td>
+                    <label class="info dept_name">
+                        <span class="icon"><i class="fas fa-pen"></i></span>
+                        <input type="text" placeholder="변경 할 조직명">
+                        <span class="icon check false">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info dept_category_name">
+                        <span class="icon"><i class="fas fa-sitemap"></i></span>
+                        <input type="text" placeholder="선택한 조직 카테고리" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div data-design="designListA">
+                        <label class="search_box">
+                            <span class="search_icon"><i class="fas fa-search"></i></span>
+                            <input type="text" class="search_input" placeholder="조직 카테고리 검색">
+                        </label>
+                        <div class="list_box scrollBar">
+                            <label class="list">
+                                <em class="name">국군지휘통신사령부</em>
+                                <input type="radio" class="radio" name="deptReviseSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                            <label class="list">
+                                <em class="name">국군지휘통신사령부 5정보통신단</em>
+                                <input type="radio" class="radio" name="deptReviseSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn_box">
+        <button id="deptManagerReviseCompleteBtn">수정 완료</button>
+    </div>
+</div>
+<!-- 통신소 관리 - ( 통신소 추가 Modal ) -->
+<div id="commManagerAddModal" class="modal" data-design="designModalA">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">통신소 추가</em>
+    </div>
+    <div class="contents_box">
+        <table data-design="designFormTableA">
+            <tr>
+                <td>
+                    <label class="info comm_name">
+                        <span class="icon"><i class="fas fa-pen"></i></span>
+                        <input type="text" placeholder="통신소명">
+                        <span class="icon check false">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info comm_ip">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <input type="text" placeholder="AGC 관제 PC 의 IP">
+                        <span class="icon check true">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info comm_category_name">
+                        <span class="icon"><i class="fas fa-user-tie"></i></span>
+                        <input type="text" placeholder="선택한 통신소장" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div data-design="designListA">
+                        <label class="search_box">
+                            <span class="search_icon"><i class="fas fa-search"></i></span>
+                            <input type="text" class="search_input" placeholder="통신소장 카테고리 검색">
+                        </label>
+                        <div class="list_box scrollBar">
+                            <label class="list">
+                                <em class="name">최정근</em>
+                                <input type="radio" class="radio" name="commAddSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                            <label class="list">
+                                <em class="name">박지호</em>
+                                <input type="radio" class="radio" name="commAddSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn_box">
+        <button id="commManagerAddCompleteBtn">추가 완료</button>
+    </div>
+</div>
+<!-- 통신소 관리 - ( 통신소 정보 수정 Modal ) -->
+<div id="commManagerReviseModal" class="modal" data-design="designModalA">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">통신소 정보 수정</em>
+    </div>
+    <div class="contents_box">
+        <table data-design="designFormTableA">
+            <tr>
+                <td>
+                    <label class="info comm_name read_only">
+                        <span class="icon"><i class="fas fa-pen"></i></span>
+                        <input type="text" placeholder="통신소명" readonly>
+                        <span class="icon check false">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info comm_ip">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <input type="text" placeholder="변경 할 AGC 관제 PC 의 IP">
+                        <span class="icon check true">
+                            <i class="fas fa-check-circle" data-content="true"></i>
+                            <i class="fas fa-times-circle" data-content="false"></i>
+                        </span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info comm_category_name">
+                        <span class="icon"><i class="fas fa-broadcast-tower"></i></span>
+                        <input type="text" placeholder="선택한 통신소장" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div data-design="designListA">
+                        <label class="search_box">
+                            <span class="search_icon"><i class="fas fa-search"></i></span>
+                            <input type="text" class="search_input" placeholder="통신소장 카테고리 검색">
+                        </label>
+                        <div class="list_box scrollBar">
+                            <label class="list">
+                                <em class="name">최정근</em>
+                                <input type="radio" class="radio" name="commReviseSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                            <label class="list">
+                                <em class="name">박지호</em>
+                                <input type="radio" class="radio" name="commReviseSelectRadio">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn_box">
+        <button id="commManagerReviseCompleteBtn">수정 완료</button>
+    </div>
+</div>
+<!-- 링크 관리 - ( 링크 추가 Modal ) -->
+<div id="linkManagerAddModal" class="modal" data-design="designModalA">
+    <div class="title_box">
+        <em class="title font_bonGothic_bold">링크 추가</em>
+    </div>
+    <div class="contents_box">
+        <table data-design="designFormTableA">
+            <tr>
+                <td colspan="2">
+                    <div class="radio_info link_MDSD">
+                        <label class="radio_box">
+                            <input type="radio" class="radio" name="linkAddInfoRadio" checked>
+                            <span class="radio_icon">
+                                <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                <em class="icon_false"><i class="fas fa-circle"></i></em>
+                            </span>
+                            <em class="name">Single</em>
+                        </label>
+                        <label class="radio_box">
+                            <input type="radio" class="radio" name="linkAddInfoRadio">
+                            <span class="radio_icon">
+                                <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                <em class="icon_false"><i class="fas fa-circle"></i></em>
+                            </span>
+                            <em class="name">MD SD</em>
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="info link_category_nameA">
+                        <span class="icon"><i class="fas fa-broadcast-tower"></i></span>
+                        <input type="text" placeholder="선택한 통신소 A" readonly>
+                    </label>
+                </td>
+                <td>
+                    <label class="info link_category_nameB">
+                        <span class="icon"><i class="fas fa-broadcast-tower"></i></span>
+                        <input type="text" placeholder="선택한 통신소 B" readonly>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div data-design="designListA">
+                        <label class="search_box">
+                            <span class="search_icon"><i class="fas fa-search"></i></span>
+                            <input type="text" class="search_input" placeholder="통신소 A 카테고리 검색">
+                        </label>
+                        <div class="list_box scrollBar">
+                            <label class="list">
+                                <em class="name">B1</em>
+                                <input type="radio" class="radio" name="linkAddSelectRadioA">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                            <label class="list">
+                                <em class="name">망경대</em>
+                                <input type="radio" class="radio" name="linkAddSelectRadioA">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div data-design="designListA">
+                        <label class="search_box">
+                            <span class="search_icon"><i class="fas fa-search"></i></span>
+                            <input type="text" class="search_input" placeholder="통신소 B 카테고리 검색">
+                        </label>
+                        <div class="list_box scrollBar">
+                            <label class="list disabled">
+                                <em class="name">B1</em>
+                                <input type="radio" class="radio" name="linkAddSelectRadioB" disabled>
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                            <label class="list">
+                                <em class="name">망경대</em>
+                                <input type="radio" class="radio" name="linkAddSelectRadioB">
+                                <span class="select_radio_icon">
+                                    <em class="icon_true"><i class="fas fa-dot-circle"></i></em>
+                                    <em class="icon_false"><i class="fas fa-circle"></i></em>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="btn_box">
+        <button id="linkManagerAddCompleteBtn">추가 완료</button>
+    </div>
+</div

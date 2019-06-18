@@ -1,0 +1,54 @@
+.modal{
+    display: none;
+}
+.modal_layer{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--black_opacity5);
+}
+.modal_layer .modal_wrap{
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.modal_layer .modal_wrap .modal_cell{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.modal_layer .modal_wrap .modal_cell .modal_main{
+    position: relative;
+    display: inline-block;
+    box-shadow: 0 0 10px #000000;
+    padding: 20px;
+    /*top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);*/
+    background: white;
+    z-index: 1001;
+}
+.modal_layer .modal_wrap .modal_cell .modal_main > .modal_close{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 5px;
+    right: 10px;
+    font-size: 20px;
+    color: #353535;
+    color: var(--mine_shaft);
+    cursor: pointer;
+}
+.modal_layer .modal_wrap .modal_cell .modal_main > .modal_close:hover{
+    opacity: 0.8;
+}
+/* Date Picker z-index */
+.datepickers-container{
+    z-index: 1002;
+}

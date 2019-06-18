@@ -1,0 +1,55 @@
+/* 기본 폰트 */
+.font_test{
+    font-family: AppleGothic;
+}
+/* 맑은 고딕 */
+.font_pureGothic_normal{
+    font-family: "맑은 고딕", "sans-serif";
+    font-weight: normal;
+}
+.font_pureGothic_bold{
+    font-family: "맑은 고딕", "sans-serif";
+    font-weight: bold;
+}
+/* 본 고딕 */
+@font-face {
+    font-family: "Bon Gothic Black";
+    src: url("../../../font/NotoSansCJKkr-hinted/NotoSansCJKkr-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: "Bon Gothic Bold";
+    src: url("../../../font/NotoSansCJKkr-hinted/NotoSansCJKkr-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Bon Gothic DemiLight";
+    src: url("../../../font/NotoSansCJKkr-hinted/NotoSansCJKkr-DemiLight.otf") format("opentype");
+}
+@font-face {
+    font-family: "Bon Gothic Light";
+    src: url("../../../font/NotoSansCJKkr-hinted/NotoSansCJKkr-Light.otf") format("opentype");
+}
+@font-face {
+    font-family: "Bon Gothic Medium";
+    src: url("../../../font/NotoSansCJKkr-hinted/NotoSansCJKkr-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "Bon Gothic Regular";
+    src: url("../../../font/NotoSansCJKkr-hinted/NotoSansCJKkr-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Bon Gothic Thin";
+    src: url("../../../font/NotoSansCJKkr-hinted/NotoSansCJKkr-Thin.otf") format("opentype");
+}
+.font_bonGothic_black{font-family: "Bon Gothic Black", "sans-serif";}
+.font_bonGothic_bold{font-family: "Bon Gothic Bold", "sans-serif";}
+.font_bonGothic_demiLight{font-family: "Bon Gothic DemiLight", "sans-serif";}
+.font_bonGothic_light{font-family: "Bon Gothic Light", "sans-serif";}
+.font_bonGothic_medium{font-family: "Bon Gothic Medium", "sans-serif";}
+.font_bonGothic_regular{font-family: "Bon Gothic Regular", "sans-serif";}
+.font_bonGothic_thin{font-family: "Bon Gothic Thin", "sans-serif";}
+/* Great Vibes */
+@font-face {
+    font-family: "Great Vibes";
+    src: url("../../../font/great-vibes/GreatVibes-Regular.ttf") format("truetype");
+}
+.font_greatVibes_regular{font-family: "Great Vibes", "sans-serif";}

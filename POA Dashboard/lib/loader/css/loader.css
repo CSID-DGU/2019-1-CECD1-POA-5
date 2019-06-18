@@ -1,0 +1,64 @@
+[data-page='loaderPage'],
+[data-page='loaderPage'][data-content='hidden']{
+    z-index: 2000;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+[data-page='loaderPage'][data-content='visible']{
+    display: table;
+}
+[data-page='loaderPage'] > .loader_box{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+[data-page='loaderPage'] > .loader_box > .loader.default{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    margin: 20px auto;
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+}
+[data-page='loaderPage'] > .loader_box > .loader.default::before,
+[data-page='loaderPage'] > .loader_box > .loader.default::after{
+    opacity: 0;
+    box-sizing: border-box;
+    content: "\0020";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    border: 5px solid #ffffff;
+    box-shadow: 0 0 50px #ffffff, inset 0 0 50px #ffffff;
+}
+[data-page='loaderPage'] > .loader_box > .loader.default::before{
+    animation: loaderA 2s infinite 1s;
+}
+[data-page='loaderPage'] > .loader_box > .loader.default::after{
+    animation: loaderA 2s infinite;
+}
+[data-page='loaderPage'] > .loader_box > .loader.default > .title{
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+@keyframes loaderA {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}

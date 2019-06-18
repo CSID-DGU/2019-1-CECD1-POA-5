@@ -1,0 +1,301 @@
+/* ----------------------------------------------------------------------------------------------------
+ * Variable Table Design
+ * ---------------------------------------------------------------------------------------------------- */
+[data-design="varTable"]{
+    width: 100%;
+}
+[data-design="varTable"] th{
+    padding: 2px 10px;
+    border-top: 1px solid var(--panton_light_violet);
+    border-bottom: 1px solid var(--panton_light_violet);
+    font-size: 13px;
+    color: var(--panton_ultra_violet);
+    background-color: var(--panton_bright_violet);
+}
+[data-design="varTable"] th.modifier{width: 15%;}
+[data-design="varTable"] th.type{width: 15%;}
+[data-design="varTable"] th.name{width: 15%;}
+[data-design="varTable"] td{
+    padding: 3px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--panton_light_violet);
+    font-size: 12px;
+    background-color: var(--panton_faint_violet);
+}
+[data-design="varTable"] td.align_left{
+    text-align: left;
+}
+[data-design="varTable"] td .modifier,
+[data-design="varTable"] td .type{
+    margin: 0 3px;
+    padding: 0 10px;
+    border-radius: 3px;
+}
+[data-design="varTable"] td .modifier{
+    color: var(--white);
+    background-color: var(--dark_gray);
+}
+[data-design="varTable"] td .modifier[data-content="public"]{
+    background-color: var(--public_sky_blue);
+}
+[data-design="varTable"] td .modifier[data-content="private"]{
+    background-color: var(--private_emerald_green);
+}
+[data-design="varTable"] td .modifier[data-content="protected"]{
+    background-color: var(--protected_purple);
+}
+[data-design="varTable"] td .type{
+    color: var(--white);
+    background-color: var(--dark_gray);
+}
+[data-design="varTable"] td .type[data-content="int"]{
+    color: var(--white);
+    background-color: var(--int_yellow);
+}
+[data-design="varTable"] td .type[data-content="float"]{
+    color: var(--white);
+    background-color: var(--float_green);
+}
+[data-design="varTable"] td .type[data-content="double"]{
+    color: var(--white);
+    background-color: var(--double_orange);
+}
+[data-design="varTable"] td .type[data-content="string"]{
+    color: var(--white);
+    background-color: var(--string_red);
+}
+[data-design="varTable"] td .type[data-content="boolean"]{
+    color: var(--white);
+    background-color: var(--boolean_blue);
+}
+[data-design="varTable"] td .type[data-content="object"]{
+    color: var(--white);
+    background-color: var(--object_purple);
+}
+[data-design="varTable"] td .type[data-content="array"]{
+    color: var(--white);
+    background-color: var(--array_red);
+}
+[data-design="varTable"] td .type[data-content="anyType"]{
+    color: var(--white);
+    background-color: var(--anyType_gray);
+}
+[data-design="varTable"] td .name{
+    color: var(--dark_black);
+    font-weight: bolder;
+}
+[data-design="varTable"] td .desc{
+    color: var(--dark_gray);
+}
+/* ----------------------------------------------------------------------------------------------------
+ * Text Box Design A
+ * ---------------------------------------------------------------------------------------------------- */
+[data-design="textBoxDesignA"]{
+    display: flex;
+    flex-direction: column;
+}
+[data-design="textBoxDesignA"] label{
+    width: fit-content;
+    padding: 3px 15px;
+    color: var(--white);
+    background-color: var(--slime_violet);
+}
+[data-design="textBoxDesignA"] input[type="text"],
+[data-design="textBoxDesignA"] textarea{
+    width: 100%;
+    height: 100%;
+    padding: 6px 10px;
+    font-size: 15px;
+    resize: none;
+    border: 1px solid var(--panton_light_violet);
+    color: var(--dark_gray);
+}
+/* ----------------------------------------------------------------------------------------------------
+ * Variable Box Design
+ * ---------------------------------------------------------------------------------------------------- */
+[data-design="varBoxDesign"]{
+    display: inline-block;
+    width: 200px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px var(--black);
+    background: var(--gd_night-fade);
+}
+[data-design="varBoxDesign"] .box{
+    width: 100%;
+    margin-bottom: 5px;
+}
+[data-design="varBoxDesign"] .box:last-of-type{
+    margin-bottom: 0;
+}
+[data-design="varBoxDesign"] .box > input[type="text"],
+[data-design="varBoxDesign"] .box > textarea{
+    width: 100%;
+    padding: 5px 8px;
+    margin-top: 3px;
+    font-size: 12px;
+    resize: none;
+    border-radius: 10px;
+    border: 2px solid var(--slime_violet);
+    color: var(--dark_gray);
+}
+[data-design="varBoxDesign"] .box > textarea{
+    height: 70px;
+}
+[data-design="varBoxDesign"] .box .addBox{
+    display: block;
+    width: 100%;
+}
+[data-design="varBoxDesign"] .box .title,
+[data-design="varBoxDesign"] .box .close,
+[data-design="varBoxDesign"] .box .addBox .plus{
+    font-size: 12px;
+    color: var(--white);
+}
+[data-design="varBoxDesign"] .box .addBox .plus{
+    padding-left: 5px;
+}
+[data-design="varBoxDesign"] .box .addBox .addData{
+    width: 100px;
+    padding: 3px 5px;
+    margin-top: 3px;
+    font-size: 12px;
+    border-radius: 10px;
+    border: 2px solid var(--slime_violet);
+    color: var(--dark_gray);
+}
+[data-design="varBoxDesign"] .box .close{
+    float: right;
+}
+[data-design="varBoxDesign"] .box .vTMBox{
+    width: 100%;
+}
+[data-design="varBoxDesign"] .box .vTMBox .delData{
+    margin-left: 5px;
+}
+[data-design="varBoxDesign"] .box .vTMBox span{
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 3px 1px;
+    border-radius: 8px;
+    font-size: 10px;
+    color: var(--white);
+    background-color: var(--panton_ultra_violet);
+    border: 0;
+}
+/* ----------------------------------------------------------------------------------------------------
+ * Method Box Design
+ * ---------------------------------------------------------------------------------------------------- */
+[data-design="methodBoxDesign"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 2px solid var(--panton_light_violet);
+    background-color: var(--panton_clean_violet);
+}
+[data-design="methodBoxDesign"] > .delete{
+    display: block;
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--black);
+}
+[data-design="methodBoxDesign"] > .title{
+    display: block;
+    font-size: 13px;
+    font-weight: bolder;
+    color: var(--dark_gray);
+}
+[data-design="methodBoxDesign"] > .title > .plus{
+    margin-left: 5px;
+}
+[data-design="methodBoxDesign"] > .tmBox{
+    width: 100%;
+    margin-bottom: 10px;
+}
+[data-design="methodBoxDesign"] > .mTMBox > .mTypeData{
+    margin-right: 5px;
+    padding: 3px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    background-color: var(--dark_gray);
+    color: var(--white);
+}
+[data-design="methodBoxDesign"] > .mTMBox > .mTypeData > .delData{
+    margin-left: 10px;
+}
+[data-design="methodBoxDesign"] > input,
+[data-design="methodBoxDesign"] > textarea,
+[data-design="methodBoxDesign"] > .addBox > .addData{
+    width: 100%;
+    padding: 3px 5px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border-radius: 10px;
+    resize: none;
+    color: var(--dark_gray);
+    border: 1px solid var(--panton_bright_violet);
+}
+[data-design="methodBoxDesign"] > textarea{
+    height: 100px;
+}
+[data-design="methodBoxDesign"] > textarea.mExampleData{
+    height: 180px;
+}
+[data-design="methodBoxDesign"] > .addBox{
+    width: 100%;
+}
+[data-design="methodBoxDesign"] > .addBox > .addData{
+    width: 20%;
+}
+[data-design="methodBoxDesign"] > .addBox > .plus{
+    margin-left: 5px;
+    font-size: 15px;
+    color: var(--dark_gray);
+}
+/* ----------------------------------------------------------------------------------------------------
+ * Select Box Type B
+ * ---------------------------------------------------------------------------------------------------- */
+[data-design="designSelectBoxB"]{
+    background-color: #fff;
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+[data-design="designSelectBoxB"]::before{
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    border-top: 10px solid var(--panton_light_violet);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    transform: translateY(50%);
+    right: 10px;
+    top: -8px;
+    bottom: 0;
+    vertical-align: middle;
+}
+[data-design="designSelectBoxB"] select{
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px 35px 5px 10px;
+    border: 2px solid var(--panton_light_violet);
+    border-radius: 5px;
+    font-size: 15px;
+    color: #737373;
+}
+[data-design="designSelectBoxB"] select:focus{
+    outline: none;
+}
+[data-design="designSelectBoxB"] select::-ms-expand{
+    display: none;
+}
+[data-design="designSelectBoxB"] .disable{
+    background-color: rgba(174, 174, 174, 0.5);
+}

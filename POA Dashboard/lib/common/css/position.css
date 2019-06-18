@@ -1,0 +1,80 @@
+/* Inline Position */
+.pos_inline > * {
+    display: inline-block;
+}
+.pos_inline.top::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: top;
+}
+.pos_inline.bottom::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: bottom;
+}
+.pos_inline.middle::after{
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+/* Table Position */
+.pos_table{
+    display: inline-table;
+}
+.pos_table > *{
+    display: table-cell;
+}
+.pos_inline.left,
+.pos_table.left > *{
+    text-align: left;
+}
+.pos_inline.right,
+.pos_table.right > *{
+    text-align: right;
+}
+.pos_inline.center,
+.pos_table.center > *{
+    text-align: center;
+}
+.pos_inline.top > img,
+.pos_table.top > *{
+    vertical-align: top;
+}
+.pos_inline.bottom > img,
+.pos_table.bottom > *{
+    vertical-align: bottom;
+}
+.pos_inline.middle > img,
+.pos_table.middle > *{
+    vertical-align: middle;
+}
+/* Absolute Position */
+.pos_absolute{
+    position: absolute;
+}
+.pos_absolute.top{
+    top: 0;
+}
+.pos_absolute.bottom{
+    bottom: 0;
+}
+.pos_absolute.middle{
+    top: 50%;
+    transform: translateY(-50%)
+}
+.pos_absolute.left{
+    left: 0;
+}
+.pos_absolute.right{
+    right: 0;
+}
+.pos_absolute.center{
+    left: 50%;
+    transform: translateX(-50%)
+}

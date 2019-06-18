@@ -1,0 +1,61 @@
+:root{
+
+    --panton_light_violet: #baacbc;
+    --panton_bright_violet: #dfcde1;
+    --panton_clean_violet: #f3e0f6;
+    --panton_faint_violet : #f7e4fa;
+    --slime_violet: #a283a6;
+    --dim_black: #3d3d3d;
+    --panton_cherry_tomato : #EB3C27;
+    --panton_red_pear : #7F4145;
+    --panton_arcadia : #00A28A;
+
+    --public_sky_blue : #6ac3ba;
+    --private_emerald_green : #23c780;
+    --protected_purple : #c36ac0;
+
+    --int_yellow : #e7d961;
+    --double_orange : #e7b361;
+    --boolean_blue : #6476b1;
+    --object_purple : #da58e2;
+    --array_red : #f74343;
+
+    --gd_night-fade : linear-gradient(120deg, #A18CD1 0%, #FBC2EB 99%, #FBC2EB 100%);
+    --gd_tempting-azure : linear-gradient(120deg, #84FAB0 0%, #8FD3F4 100%);
+    --gd_winter-neva : linear-gradient(120deg, #A1C4FD 0%, #C2E9FB 100%);
+    --gd_light-gray : linear-gradient(120deg, #d8d8d8 0%, #ffffff 100%);
+
+    --white: #ffffff;
+    --strawberry_milk : #fbaeae;
+    --milk_red : #ff7b7b;
+    --string_red : #e76161;
+    --tomato : #ff5455;
+    --pumpkin : #fabb3d;
+    --kyun_orange: #ffae2e; /* 균 오렌지 색 === 귤 오렌지 색*/
+    --test_green : #c3fc9d;
+    --mint_green : #8cc39b;
+    --lime_green : #9ae761;
+    --sushi : #79c447;
+    --sky_blue : #e1e3eb;
+    --pt_blue : #c1cfff;
+    --light_blue : #9ca9d4;
+    --navy_blue : #6476b1;
+    --dolphin_blue : #57679b;
+    --shark_blue : #454f6f;
+    --ultra_violet: #5F4B8B;
+    --athens_gray : #ecedf2;
+    --bright_gray : #F3F3F3;
+    --light_gray : #dcdcdc;
+    --dim_gray : #bfbfbf;
+    --sun_gray : #A5A9AC;
+    --modern_gray : #787878;
+    --dark_gray : #5a5a5a;
+    --deep_gray : #4a4a4a;
+    --mine_shaft : #353535;
+    --dark_shaft : #2e2e2e;
+    --dark_black: #2b2b2b;
+    --black: #000000;
+    --black_opacity3: rgba(0, 0, 0, 0.3);
+    --black_opacity5: rgba(0, 0, 0, 0.5);
+    --black_opacity7: rgba(0, 0, 0, 0.7);
+}
